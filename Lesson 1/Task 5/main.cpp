@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
     int a = 0, b = 0, c = 0;
-    double d = 0, x1 = 0, x2 = 0;
+    double d = 0, x1 = 0;
     cout << "Enter a : " << endl;
     cin >> a;
     cout << "Enter b : " << endl;
@@ -17,9 +17,9 @@ int main(){
 
     if (d>0){
         x1 = ((-b) + sqrt(d)) / (2 * a);
-        x2 = ((-b) - sqrt(d)) / (2 * a);
         cout <<"x1 = " << x1 << endl;
-        cout <<"x2 = " << x2 << endl;
+        x1 = ((-b) - sqrt(d)) / (2 * a);
+        cout <<"x2 = " << x1 << endl;
     }
 
     else if (d == 0){
