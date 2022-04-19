@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    float mbPrice = 0, gpuPrice = 0, cpuPrice = 0, discount = 0, totalPrice = 0, totalCost = 0;
+    float mbPrice = 0, gpuPrice = 0, cpuPrice = 0, discount = 0, totalCost = 0;
 
     cout << "Enter motherboard price: ";
     cin >> mbPrice;
@@ -14,9 +14,8 @@ int main()
     cin >> cpuPrice;
     cout << "Enter discount(%): ";
     cin >> discount;
-    totalPrice = mbPrice + gpuPrice + cpuPrice;
-    discount = totalPrice * discount / 100;
-    totalCost = totalPrice - discount;
+    discount = (mbPrice + gpuPrice + cpuPrice) * discount / 100;
+    totalCost = mbPrice + gpuPrice + cpuPrice - discount;
     cout << "This PC will cost - " << totalCost;
     return 0;
 }
