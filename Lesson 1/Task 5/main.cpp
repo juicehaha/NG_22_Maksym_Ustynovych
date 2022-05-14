@@ -5,29 +5,29 @@ using namespace std;
 
 int main(){
     int a = 0, b = 0, c = 0;
-    double d = 0, x1 = 0;
-    cout << "Enter a : " << endl;
+    cout << "Enter a: ";
     cin >> a;
-    cout << "Enter b : " << endl;
+    cout << "Enter b: ";
     cin >> b;
-    cout << "Enter c :" << endl;
+    cout << "Enter c: ";
     cin >> c;
 
-    d = b*b-4*a*c;
-
-    if (d>0){
-        x1 = ((-b) + sqrt(d)) / (2 * a);
+    if (b*b-4*a*c > 0)
+    {
+        double x1 = ((-b) + sqrt(b*b-4*a*c)) / (2 * a);
         cout <<"x1 = " << x1 << endl;
-        x1 = ((-b) - sqrt(d)) / (2 * a);
+        double x2 = ((-b) - sqrt(b*b-4*a*c)) / (2 * a);
         cout <<"x2 = " << x1 << endl;
     }
 
-    else if (d == 0){
-    x1 = (-b) / (2 * a);
-    cout << "x = " << x1 << endl;
+    else if (b*b-4*a*c == 0)
+    {
+        double x1 = (-b) / (2 * a);
+        cout << "x = " << x1 << endl;
     }
 
-    else {
+    else
+    {
     cout << "No roots" << endl;
     }
 }
