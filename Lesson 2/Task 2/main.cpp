@@ -5,23 +5,23 @@ using namespace std;
 int main()
 {
     int number = 0;
-    int number1 = 0;
     int sum = 0;
     int temp = 0;
 
     cout << "Enter your number: ";
     cin >> number;
 
-    number1 = number;
+    temp = number;
 
-    while (number1 != 0)
+    while (temp != 0)
     {
-        temp = number1 %10;
-        if (temp %2 == 0)
+        int sup = 0;
+        sup += temp %10;
+        if (sup %2 == 0)
         {
-            sum += temp;
+            sum += sup;
         }
-        number1 = number1/10;
+        temp = temp/10;
     }
     cout << "Sum of even numbers are: " << sum;
 
